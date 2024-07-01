@@ -34,11 +34,11 @@ function handleSubmit(evt) {
         titleColor: 'white',
       });
     })
-    .catch(option => {
+    .catch(delay => {
       iziToast.error({
         title: 'Error',
         iconUrl: './img/Group.svg',
-        message: `Illegal operation`,
+        message: `Rejected promise in ${delay}ms`,
         position: 'topRight',
         backgroundColor: ' #ef4040',
         messageColor: 'white',
@@ -53,7 +53,7 @@ function createPromise(inputTime, option) {
       if (option === 'fulfilled') {
         resolve(inputTime);
       } else {
-        reject(option);
+        reject(inputTime);
       }
     }, inputTime);
   });

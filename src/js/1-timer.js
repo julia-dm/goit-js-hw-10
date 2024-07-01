@@ -55,10 +55,10 @@ function clickBtn() {
 
     if (diffTime <= 0) {
       clearInterval(interval);
-      elements.days.textContent = '0';
-      elements.hours.textContent = '0';
-      elements.minutes.textContent = '0';
-      elements.seconds.textContent = '0';
+      elements.days.textContent = '00';
+      elements.hours.textContent = '00';
+      elements.minutes.textContent = '00';
+      elements.seconds.textContent = '00';
       return;
     }
 
